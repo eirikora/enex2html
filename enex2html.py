@@ -344,11 +344,11 @@ def write_html(notes, output_folder):
                 output_file.write(line + "\n")
 
 @click.command()
-@click.argument('input_file')
+@click.argument('enex_file')
 def app(enex_file):
-    """ Run the converter. Requires the input_file (data.enex) to be processed as the first argument. """
+    """ Run the converter. Requires the enex_file (data.enex) to be processed as the first argument. """
     
-    print(f"Processing input file: {input_file}, writing output to folder 'output'.")
+    print(f"Processing input file: {enex_file}, writing output to folder 'output'.")
 
     the_notes = process_enex_file(enex_file)
     output_folder = create_output_folder(enex_file)
